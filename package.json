@@ -1,11 +1,11 @@
 {
-  "name": "graasp-app-multiple-choice-question",
-  "description": "A basic app that lets you ask a question and gives you multiple choices to pick from on Graasp.",
-  "version": "1.0.3",
+  "name": "graasp-app-likert-scale",
+  "description": "A basic app to create Likert scale items on Graasp.",
+  "version": "0.0.0",
   "license": "AGPL-3.0-only",
   "author": "Graasp",
   "repository": {
-    "url": "https://github.com/graasp/graasp-app-multiple-choice-question",
+    "url": "https://github.com/graasp/graasp-app-likert-scale",
     "type": "github"
   },
   "contributors": [
