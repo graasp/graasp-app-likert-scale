@@ -30,21 +30,21 @@
     "SETTINGS": {
       "TITLE": "Settings",
       "SAVE_BTN": "Save",
-      "QUESTION": {
-        "TITLE": "Question"
+      "LEVELS": {
+        "TITLE": "Levels"
       },
-      "ANSWERS": {
+      "LIKERT_ITEM": {
         "TITLE": "Answers",
         "NEW_ANSWER_BTN": "Add a new answer",
         "DEFAULT_ANSWER_TABLE_HEAD": "Default answer",
         "MULTIPLE_ANS_SWITCH_LABEL": "Allow multiple answers.",
-        "INPUT": {
           "KEY_HELP_WARNING": "Please, provide a key.",
-          "KEY_HELP_ERROR": "Please, make sure each key is unique.",
+          "KEY_HELPER": "Enter a unique identifier for your item.",
           "KEY_LABEL": "Key",
+          "LABEL_LABEL": "Label",
+          "SECOND_LABEL_LABEL": "Right label",
           "VALUE_LABEL": "Value",
           "ANSWER_LABEL": "Answer"
-        }
       },
       "GENERAL": {
         "TITLE": "General",

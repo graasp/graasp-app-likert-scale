@@ -1,10 +1,12 @@
 import { FC, ReactElement, createContext, useContext } from 'react';
 
 import {
-  AnswersSettings,
   GeneralSettings,
-  QuestionSettings,
+  LabelPosition,
+  LevelsSettings,
+  LikertItemSettings,
 } from '@/config/appSettings';
+import { getNewLikertItem } from '@/interfaces/likertItem';
 
 import { hooks, mutations } from '../../config/queryClient';
 import Loader from '../common/Loader';
@@ -12,30 +14,31 @@ import Loader from '../common/Loader';
 // mapping between Setting names and their data type
 // eslint-disable-next-line @typescript-eslint/ban-types
 type AllSettingsType = {
-  question: QuestionSettings;
-  answers: AnswersSettings;
+  levels: LevelsSettings;
+  likertItem: LikertItemSettings;
   general: GeneralSettings;
 };
 
 // default values for the data property of settings by name
 const defaultSettingsValues: AllSettingsType = {
-  question: {
-    label: '',
-  },
-  answers: {
-    answers: [],
-    multipleAnswers: false,
+  likertItem: {
+    item: getNewLikertItem(),
+    labelPosition: LabelPosition.Top,
   },
   general: {
     required: false,
+  },
+  levels: {
+    levels: 5,
+    labels: new Map<number, string>([]),
   },
 };
 
 // list of the settings names
 const ALL_SETTING_NAMES = [
   // name of your settings
-  'question',
-  'answers',
+  'levels',
+  'likertItem',
   'general',
 ] as const;
 

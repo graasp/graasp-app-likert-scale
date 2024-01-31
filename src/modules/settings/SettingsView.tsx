@@ -10,83 +10,71 @@ import Typography from '@mui/material/Typography';
 import isEqual from 'lodash.isequal';
 
 import {
-  AnswersSettings,
   GeneralSettings,
-  QuestionSettings,
+  LevelsSettings,
+  LikertItemSettings,
 } from '@/config/appSettings';
 import { SETTINGS_SAVE_BTN_CY, SETTINGS_VIEW_CY } from '@/config/selectors';
 
 import { useSettings } from '../context/SettingsContext';
-import AnswersSettingsEdit from './AnswersSettings';
 import GeneralSettingsEdit from './GeneralSettings';
-import QuestionSettingsEdit from './QuestionSettings';
+import LevelsSettingsEdit from './LevelsSettings';
+import LikertItemSettingsEdit from './likertItemSettings';
 
 const SettingsView: FC = () => {
   const { t } = useTranslation();
   const {
-    question: questionSavedState,
-    answers: answersSavedState,
+    levels: levelsSavedState,
+    likertItem: likertItemSavedState,
     general: generalSavedState,
     saveSettings,
   } = useSettings();
 
-  const [question, setQuestion] =
-    useState<QuestionSettings>(questionSavedState);
-  const [answers, setAnswers] = useState<AnswersSettings>(answersSavedState);
+  const [levels, setLevels] = useState<LevelsSettings>(levelsSavedState);
+  const [likertItem, setLikertItem] =
+    useState<LikertItemSettings>(likertItemSavedState);
   const [general, setGeneral] = useState<GeneralSettings>(generalSavedState);
 
   const saveAllSettings = (): void => {
-    saveSettings('question', question);
-    saveSettings('answers', {
-      ...answers,
-      answers: answers.answers.filter((answer) => {
-        if (answer?.key.length > 0) {
-          return true;
-        }
-        return false;
-      }),
-    });
+    saveSettings('levels', levels);
+    saveSettings('likertItem', likertItem);
     saveSettings('general', general);
   };
 
-  useEffect(() => setQuestion(questionSavedState), [questionSavedState]);
-  useEffect(() => {
-    setAnswers(answersSavedState);
-  }, [answersSavedState]);
   useEffect(() => setGeneral(generalSavedState), [generalSavedState]);
 
   const disableSave = useMemo(() => {
     if (
-      isEqual(questionSavedState, question) &&
-      isEqual(answersSavedState, answers) &&
+      isEqual(levelsSavedState, levels) &&
+      isEqual(likertItemSavedState, likertItem) &&
       isEqual(general, generalSavedState)
     ) {
       return true;
     }
     return false;
   }, [
-    answers,
-    answersSavedState,
     general,
     generalSavedState,
-    question,
-    questionSavedState,
+    levels,
+    levelsSavedState,
+    likertItem,
+    likertItemSavedState,
   ]);
 
   return (
     <Stack data-cy={SETTINGS_VIEW_CY} spacing={2}>
       <Typography variant="h1">{t('SETTINGS.TITLE')}</Typography>
       <GeneralSettingsEdit general={general} onChange={setGeneral} />
-      <QuestionSettingsEdit
-        question={question}
-        onChange={(newSetting: QuestionSettings) => {
-          setQuestion(newSetting);
+      <LevelsSettingsEdit
+        levels={levels}
+        onChange={(newSetting: LevelsSettings) => {
+          setLevels(newSetting);
         }}
       />
-      <AnswersSettingsEdit
-        answers={answers}
-        onChange={(newSetting: AnswersSettings) => {
-          setAnswers({ ...newSetting });
+      <LikertItemSettingsEdit
+        likertItem={likertItem}
+        onChange={(newSetting: LikertItemSettings) => {
+          setLikertItem({ ...newSetting });
         }}
       />
       <Box>

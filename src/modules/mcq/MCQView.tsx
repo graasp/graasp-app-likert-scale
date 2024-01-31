@@ -24,10 +24,12 @@ import SingleAnswer from './SingleAnswer';
 
 const MCQView: FC = () => {
   const { t } = useTranslation('translations', { keyPrefix: 'MCQ' });
-  const { answers, question, general } = useSettings();
+  const { likertItem, levels: levelsSettings, general } = useSettings();
   const { required } = general;
   const { userAnswer, deleteAnswer, submitAnswer } = useUserAnswer();
-  const { multipleAnswers } = answers;
+  const { item, labelPosition } = likertItem;
+  const { label, secondLabel, key } = item;
+  const { levels, labels: levelsLabels } = levelsSettings;
   const showSubmitButton = useMemo(
     () => userAnswer?.status === UserAnswerStatus.Saved,
     [userAnswer],
@@ -39,7 +41,8 @@ const MCQView: FC = () => {
   return (
     <Stack spacing={1} justifyContent="space-between" direction="row">
       <Box>
-        <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
+        {/* TODO: Adapt this part. */}
+        {/* <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
           {question.label}
           {required && <sup>*</sup>}
         </Typography>
@@ -47,7 +50,7 @@ const MCQView: FC = () => {
           <MultipleAnswers userAnswer={userAnswer} answersSettings={answers} />
         ) : (
           <SingleAnswer userAnswer={userAnswer} answersSettings={answers} />
-        )}
+        )} */}
         <Stack sx={{ mt: 1 }} direction="row" spacing={1}>
           <Collapse in={showResetButton}>
             <Tooltip title={t('RESET_ANSWER')}>

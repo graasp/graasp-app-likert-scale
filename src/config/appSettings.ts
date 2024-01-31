@@ -1,12 +1,21 @@
-import { Answer } from '@/interfaces/answers';
+import { LikertItem } from '@/interfaces/likertItem';
 
-export type QuestionSettings = {
-  label: string;
+export enum LabelPosition {
+  Top = 'top',
+  Left = 'left',
+  Right = 'right',
+  Bottom = 'bottom',
+  Ends = 'ends',
+}
+
+export type LevelsSettings = {
+  levels: number;
+  labels: Map<number, string>;
 };
 
-export type AnswersSettings = {
-  answers: Array<Answer>;
-  multipleAnswers: boolean;
+export type LikertItemSettings = {
+  item: LikertItem;
+  labelPosition?: LabelPosition;
 };
 
 export type GeneralSettings = {
