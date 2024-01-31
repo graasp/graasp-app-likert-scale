@@ -1,0 +1,128 @@
+{
+  "name": "graasp-app-multiple-choice-question",
+  "description": "A basic app that lets you ask a question and gives you multiple choices to pick from on Graasp.",
+  "version": "1.0.3",
+  "license": "AGPL-3.0-only",
+  "author": "Graasp",
+  "repository": {
+    "url": "https://github.com/graasp/graasp-app-multiple-choice-question",
+    "type": "github"
+  },
+  "contributors": [
+    {
+      "name": "Jérémy La Scala",
+      "email": "jeremy.lascala@epfl.ch",
+      "url": "https://github.com/swouf"
+    },
+    "Basile Spaenlehauer"
+  ],
+  "homepage": ".",
+  "type": "module",
+  "dependencies": {
+    "@emotion/react": "11.11.3",
+    "@emotion/styled": "11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@graasp/apps-query-client": "3.4.1",
+    "@graasp/sdk": "3.6.0",
+    "@mui/icons-material": "5.15.6",
+    "@mui/lab": "5.0.0-alpha.162",
+    "@mui/material": "5.15.6",
+    "@sentry/react": "7.95.0",
+    "@tanstack/react-query": "^4.36.1",
+    "@tanstack/react-query-devtools": "^4.36.1",
+    "@types/node": "20.11.6",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "i18next": "23.7.18",
+    "lodash.isequal": "^4.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "14.0.1",
+    "react-toastify": "10.0.4",
+    "typescript": "5.3.3"
+  },
+  "scripts": {
+    "dev": "yarn vite",
+    "dev:mock": "VITE_ENABLE_MOCK_API=true && yarn vite",
+    "start": "yarn dev",
+    "start:test": "yarn vite --mode test",
+    "build": "yarn vite build",
+    "build:test": "yarn vite build --mode test",
+    "preview": "yarn vite preview",
+    "preview:test": "yarn vite preview --mode test",
+    "postinstall": "husky install",
+    "lint": "eslint .",
+    "prettier:write": "prettier {src,cypress}/**/*.{ts,tsx,js,jsx} --write",
+    "prettier:check": "prettier {src,cypress}/**/*.{ts,tsx,js,jsx} --check",
+    "type-check": "tsc --noEmit",
+    "check": "yarn lint && yarn prettier:check && yarn type-check",
+    "hooks:install": "husky install",
+    "hooks:uninstall": "husky uninstall",
+    "pre-commit": "yarn prettier:check && yarn lint",
+    "cypress:open": "env-cmd -f ./.env.test cypress open",
+    "test": "concurrently -k -s first \"yarn start:test\" \"yarn test:ci\" ",
+    "test:ci": "env-cmd -f ./.env.test cypress run --browser chrome --headless && nyc report --reporter=text --reporter=text-summary",
+    "cov:report": "open ./coverage/lcov-report/index.html"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "18.5.0",
+    "@commitlint/config-conventional": "18.5.0",
+    "@cypress/code-coverage": "3.12.19",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/i18n": "0.13.10",
+    "@types/lodash.isequal": "^4.5.8",
+    "@types/uuid": "9.0.8",
+    "@typescript-eslint/eslint-plugin": "6.19.1",
+    "@typescript-eslint/parser": "6.19.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "8.2.2",
+    "cypress": "13.6.3",
+    "env-cmd": "10.1.0",
+    "eslint": "8.56.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-cypress": "2.15.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
+    "miragejs": "^0.1.48",
+    "nock": "^13.5.0",
+    "nyc": "15.1.0",
+    "prettier": "3.2.4",
+    "uuid": "9.0.1",
+    "vite": "^5.0.12",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-istanbul": "^5.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.{js,ts,jsx,tsx}"
+    ],
+    "exclude": [
+      "src/**/*.d.ts"
+    ]
+  },
+  "packageManager": "yarn@4.0.2",
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

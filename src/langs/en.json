@@ -1,0 +1,55 @@
+{
+  "translations": {
+    "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit",
+    "Answers": "Answers",
+    "MCQ": {
+      "SUBMIT_OK_TOOLTIP": "Your answer has been submitted.",
+      "SUBMIT_OK_HELPER": "Submitted",
+      "SAVED_TOOLTIP": "Your answer has been saved.",
+      "SAVED_HELPER": "Saved",
+      "RESET_ANSWER": "Reset your answer.",
+      "REQUIRED_CHIP": "Required",
+      "REQUIRED_TOOLTIP": "This question requires an answer.",
+      "SUBMIT": "Submit",
+      "RESET": "Reset"
+    },
+    "ANSWERS": {
+      "TITLE": "Answers",
+      "TABLE": {
+        "MEMBER_HEAD": "Member",
+        "KEY_HEAD": "Key",
+        "LABEL_HEAD": "Answer",
+        "ROW": {
+          "KEY_ERASED_WARNING": {
+            "STRING_1": "The key ",
+            "STRING_2": " does not exist."
+          }
+        }
+      }
+    },
+    "SETTINGS": {
+      "TITLE": "Settings",
+      "SAVE_BTN": "Save",
+      "QUESTION": {
+        "TITLE": "Question"
+      },
+      "ANSWERS": {
+        "TITLE": "Answers",
+        "NEW_ANSWER_BTN": "Add a new answer",
+        "DEFAULT_ANSWER_TABLE_HEAD": "Default answer",
+        "MULTIPLE_ANS_SWITCH_LABEL": "Allow multiple answers.",
+        "INPUT": {
+          "KEY_HELP_WARNING": "Please, provide a key.",
+          "KEY_HELP_ERROR": "Please, make sure each key is unique.",
+          "KEY_LABEL": "Key",
+          "VALUE_LABEL": "Value",
+          "ANSWER_LABEL": "Answer"
+        }
+      },
+      "GENERAL": {
+        "TITLE": "General",
+        "REQUIRED_SWITCH_LABEL": "Mark the question as required."
+      }
+    }
+  }
+}
