@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 import { LevelsSettings } from '@/config/appSettings';
+import { MAX_NUMBER_OF_LEVELS } from '@/config/constants';
 import { SETTINGS_LEVELS_NUMERIC_FIELD_CY } from '@/config/selectors';
 import { validateNumberOfLevels } from '@/utils/settingsValidation';
 
@@ -13,18 +14,22 @@ const LevelsSettingsEdit: FC<{
   levels: LevelsSettings;
   onChange: (newSetting: LevelsSettings) => void;
 }> = ({ levels, onChange }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translations', {
+    keyPrefix: 'SETTINGS.LEVELS',
+  });
   const { levels: numberOfLevels, labels } = levels;
   const [isValid, setIsValid] = useState(true);
 
-  const mapLabels = new Map(
-    Array.from(Array(levels).keys()).map((x) => [x, labels.get(x) || '']),
+  const mapLabels = Array.from(Array(numberOfLevels).keys()).map(
+    (x) => labels[x] || '',
   );
-
+  // eslint-disable-next-line no-console
+  console.log(mapLabels);
   const handleChange = (newValue: string): void => {
-    if (validateNumberOfLevels(newValue) || newValue.length === 0) {
+    const isEmpty = newValue.length === 0;
+    if (validateNumberOfLevels(newValue) || isEmpty) {
       setIsValid(true);
-      const newLevels = parseInt(newValue, 10);
+      const newLevels = isEmpty ? 2 : parseInt(newValue, 10);
       onChange({
         levels: newLevels,
         labels,
@@ -34,32 +39,41 @@ const LevelsSettingsEdit: FC<{
     }
   };
   const handleLabelChange = (newLabel: string, index: number): void => {
-    labels.set(index, newLabel);
+    labels[index] = newLabel;
     onChange({
       levels: numberOfLevels,
       labels,
     });
   };
   return (
-    <Stack spacing={1}>
-      <Typography variant="h2">{t('SETTINGS.LEVELS.TITLE')}</Typography>
+    <Stack spacing={3}>
+      <Typography variant="h2">{t('TITLE')}</Typography>
       <TextField
         error={!isValid}
         inputProps={{
           'data-cy': SETTINGS_LEVELS_NUMERIC_FIELD_CY,
         }}
-        value={numberOfLevels}
+        defaultValue={numberOfLevels}
         onChange={(e) => handleChange(e.target.value)}
+        label={t('NBR_LEVELS_LABEL')}
+        helperText={
+          !isValid &&
+          t('HELPER_ERROR_NBR_LEVELS', {
+            maxNumberLevels: MAX_NUMBER_OF_LEVELS,
+          })
+        }
       />
-      {Array.from(mapLabels.entries()).map(([index, label]) => (
-        <span key={index}>
-          <p>{index}</p>
+      <Stack direction="column" spacing={2} p="16pt">
+        <Typography variant="body1">{t('LABELS')}</Typography>
+        {mapLabels.map((label, index) => (
           <TextField
+            key={index}
+            label={t('LABEL_LEVEL_N', { n: index })}
             value={label}
             onChange={(e) => handleLabelChange(e.target.value, index)}
           />
-        </span>
-      ))}
+        ))}
+      </Stack>
     </Stack>
   );
 };

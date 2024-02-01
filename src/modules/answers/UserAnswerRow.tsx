@@ -22,19 +22,19 @@ const UserAnswerRow: FC<{
   const { t } = useTranslation('translations', {
     keyPrefix: 'ANSWERS.TABLE.ROW',
   });
-  const { answers } = useSettings();
-  const key = userAnswerAppData.data.singleKey;
-  const label = answers.answers.find((a) => a.key === key)?.label;
+  const { levels } = useSettings();
+  const ans = userAnswerAppData.data.answer;
+  const label = levels.labels[ans];
   return (
     <TableRow>
       <TableCell>{userAnswerAppData.creator?.name}</TableCell>
-      <TableCell>{key}</TableCell>
+      <TableCell>{ans}</TableCell>
       <TableCell>
         {label ?? (
           <Alert severity="warning">
             <ItalicText variant="body1">
               {t('KEY_ERASED_WARNING.STRING_1')}
-              <BoldWord>{key}</BoldWord>
+              <BoldWord>{ans}</BoldWord>
               {t('KEY_ERASED_WARNING.STRING_2')}
             </ItalicText>
           </Alert>

@@ -30,7 +30,7 @@ const defaultSettingsValues: AllSettingsType = {
   },
   levels: {
     levels: 5,
-    labels: new Map<number, string>([]),
+    labels: ['', '', '', '', ''],
   },
 };
 

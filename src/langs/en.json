@@ -31,10 +31,14 @@
       "TITLE": "Settings",
       "SAVE_BTN": "Save",
       "LEVELS": {
-        "TITLE": "Levels"
+        "TITLE": "Levels",
+        "NBR_LEVELS_LABEL": "Number of levels",
+        "HELPER_ERROR_NBR_LEVELS": "Enter a level between 2 and {{ maxNumberLevels }}.",
+        "LABEL_LEVEL_N": "Label level {{ n }}",
+        "LABELS": "Labels"
       },
       "LIKERT_ITEM": {
-        "TITLE": "Answers",
+        "TITLE": "Likert item",
         "NEW_ANSWER_BTN": "Add a new answer",
         "DEFAULT_ANSWER_TABLE_HEAD": "Default answer",
         "MULTIPLE_ANS_SWITCH_LABEL": "Allow multiple answers.",
@@ -44,7 +48,13 @@
           "LABEL_LABEL": "Label",
           "SECOND_LABEL_LABEL": "Right label",
           "VALUE_LABEL": "Value",
-          "ANSWER_LABEL": "Answer"
+          "ANSWER_LABEL": "Answer",
+          "TOP_POS_LABEL": "Top",
+          "BOTTOM_POS_LABEL": "Bottom",
+          "LEFT_POS_LABEL": "Left",
+          "RIGHT_POS_LABEL": "Right",
+          "ENDS_POS_LABEL": "On both ends (two labels)",
+          "SELECT_POS_LABEL": "Select the position of the label(s)"
       },
       "GENERAL": {
         "TITLE": "General",

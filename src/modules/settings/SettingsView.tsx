@@ -19,7 +19,7 @@ import { SETTINGS_SAVE_BTN_CY, SETTINGS_VIEW_CY } from '@/config/selectors';
 import { useSettings } from '../context/SettingsContext';
 import GeneralSettingsEdit from './GeneralSettings';
 import LevelsSettingsEdit from './LevelsSettings';
-import LikertItemSettingsEdit from './likertItemSettings';
+import LikertItemSettingsEdit from './LikertItemSettings';
 
 const SettingsView: FC = () => {
   const { t } = useTranslation();
@@ -42,6 +42,8 @@ const SettingsView: FC = () => {
   };
 
   useEffect(() => setGeneral(generalSavedState), [generalSavedState]);
+  useEffect(() => setLikertItem(likertItemSavedState), [likertItemSavedState]);
+  useEffect(() => setLevels(levelsSavedState), [levelsSavedState]);
 
   const disableSave = useMemo(() => {
     if (

@@ -10,7 +10,7 @@ export enum LabelPosition {
 
 export type LevelsSettings = {
   levels: number;
-  labels: Map<number, string>;
+  labels: Array<string>;
 };
 
 export type LikertItemSettings = {

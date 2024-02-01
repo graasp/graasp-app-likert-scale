@@ -12,23 +12,21 @@ import Chip from '@mui/material/Chip';
 import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
 
-import { MCQ_QUESTION_CY } from '@/config/selectors';
 import { UserAnswerStatus } from '@/interfaces/userAnswer';
 
 import { useSettings } from '../context/SettingsContext';
 import useUserAnswer from '../context/UserAnswersContext';
-import MultipleAnswers from './MultipleAnswers';
-import SingleAnswer from './SingleAnswer';
+import LikertItem from './LikertItem';
 
-const MCQView: FC = () => {
+const ItemView: FC = () => {
   const { t } = useTranslation('translations', { keyPrefix: 'MCQ' });
   const { likertItem, levels: levelsSettings, general } = useSettings();
   const { required } = general;
-  const { userAnswer, deleteAnswer, submitAnswer } = useUserAnswer();
+  const { userAnswer, deleteAnswer, submitAnswer, selectAnswer } =
+    useUserAnswer();
   const { item, labelPosition } = likertItem;
-  const { label, secondLabel, key } = item;
+  const { label, secondLabel } = item;
   const { levels, labels: levelsLabels } = levelsSettings;
   const showSubmitButton = useMemo(
     () => userAnswer?.status === UserAnswerStatus.Saved,
@@ -40,7 +38,7 @@ const MCQView: FC = () => {
   );
   return (
     <Stack spacing={1} justifyContent="space-between" direction="row">
-      <Box>
+      <Box flex={1}>
         {/* TODO: Adapt this part. */}
         {/* <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
           {question.label}
@@ -51,6 +49,16 @@ const MCQView: FC = () => {
         ) : (
           <SingleAnswer userAnswer={userAnswer} answersSettings={answers} />
         )} */}
+        <LikertItem
+          label={label}
+          secondLabel={secondLabel}
+          labelPosition={labelPosition}
+          levels={levels}
+          levelsLabels={levelsLabels}
+          required={required}
+          userAnswer={userAnswer?.answer}
+          onChange={selectAnswer}
+        />
         <Stack sx={{ mt: 1 }} direction="row" spacing={1}>
           <Collapse in={showResetButton}>
             <Tooltip title={t('RESET_ANSWER')}>
@@ -76,7 +84,7 @@ const MCQView: FC = () => {
           </Collapse>
         </Stack>
       </Box>
-      <Stack direction="column" spacing={1} alignItems="center">
+      <Stack width="10rem" direction="column" spacing={1} alignItems="center">
         {userAnswer?.status === UserAnswerStatus.Submitted && (
           <Tooltip title={t('SUBMIT_OK_TOOLTIP')}>
             <Chip
@@ -111,4 +119,4 @@ const MCQView: FC = () => {
   );
 };
 
-export default MCQView;
+export default ItemView;
