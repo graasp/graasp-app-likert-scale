@@ -21,5 +21,8 @@ export const makeMcqAnswersCy = (index: number): string =>
 export const makeMcqMultipleAnswersCy = (index: number): string =>
   `mcq-multiple-answer-${index}`;
 
+export const makeLabelFieldForLevelCy = (index: number): string =>
+  `label-field-for-level-${index}`;
+
 export const buildDataCy = (selector: string): string =>
   `[data-cy=${selector}]`;

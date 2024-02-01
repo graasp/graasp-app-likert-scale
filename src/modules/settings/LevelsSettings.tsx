@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Stack from '@mui/material/Stack';
@@ -7,7 +7,10 @@ import Typography from '@mui/material/Typography';
 
 import { LevelsSettings } from '@/config/appSettings';
 import { MAX_NUMBER_OF_LEVELS } from '@/config/constants';
-import { SETTINGS_LEVELS_NUMERIC_FIELD_CY } from '@/config/selectors';
+import {
+  SETTINGS_LEVELS_NUMERIC_FIELD_CY,
+  makeLabelFieldForLevelCy,
+} from '@/config/selectors';
 import { validateNumberOfLevels } from '@/utils/settingsValidation';
 
 const LevelsSettingsEdit: FC<{
@@ -19,17 +22,23 @@ const LevelsSettingsEdit: FC<{
   });
   const { levels: numberOfLevels, labels } = levels;
   const [isValid, setIsValid] = useState(true);
+  const [numberOfLevelsUI, setNumberOfLevelsUI] = useState(
+    numberOfLevels.toString(),
+  );
+
+  useEffect(() => {
+    setNumberOfLevelsUI(numberOfLevels.toString());
+  }, [numberOfLevels]);
 
   const mapLabels = Array.from(Array(numberOfLevels).keys()).map(
     (x) => labels[x] || '',
   );
-  // eslint-disable-next-line no-console
-  console.log(mapLabels);
   const handleChange = (newValue: string): void => {
-    const isEmpty = newValue.length === 0;
-    if (validateNumberOfLevels(newValue) || isEmpty) {
+    let newLevels = 0;
+    setNumberOfLevelsUI(newValue);
+    newLevels = parseInt(newValue, 10);
+    if (validateNumberOfLevels(newLevels) && !Number.isNaN(newLevels)) {
       setIsValid(true);
-      const newLevels = isEmpty ? 2 : parseInt(newValue, 10);
       onChange({
         levels: newLevels,
         labels,
@@ -53,7 +62,7 @@ const LevelsSettingsEdit: FC<{
         inputProps={{
           'data-cy': SETTINGS_LEVELS_NUMERIC_FIELD_CY,
         }}
-        defaultValue={numberOfLevels}
+        value={numberOfLevelsUI}
         onChange={(e) => handleChange(e.target.value)}
         label={t('NBR_LEVELS_LABEL')}
         helperText={
@@ -71,6 +80,9 @@ const LevelsSettingsEdit: FC<{
             label={t('LABEL_LEVEL_N', { n: index })}
             value={label}
             onChange={(e) => handleLabelChange(e.target.value, index)}
+            inputProps={{
+              'data-cy': makeLabelFieldForLevelCy(index),
+            }}
           />
         ))}
       </Stack>
