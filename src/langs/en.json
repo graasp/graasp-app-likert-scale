@@ -17,7 +17,7 @@
       "TITLE": "Answers",
       "TABLE": {
         "MEMBER_HEAD": "Member",
-        "KEY_HEAD": "Key",
+        "VALUE_HEAD": "Value",
         "LABEL_HEAD": "Answer",
         "ROW": {
           "KEY_ERASED_WARNING": {

@@ -25,7 +25,7 @@ const AnswersView: FC = () => {
           <TableHead>
             <TableRow>
               <TableCell>{t('TABLE.MEMBER_HEAD')}</TableCell>
-              <TableCell>{t('TABLE.KEY_HEAD')}</TableCell>
+              <TableCell>{t('TABLE.VALUE_HEAD')}</TableCell>
               <TableCell>{t('TABLE.LABEL_HEAD')}</TableCell>
             </TableRow>
           </TableHead>
