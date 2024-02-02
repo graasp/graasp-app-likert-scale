@@ -94,9 +94,10 @@ const LikertItem: FC<LikertItemProps> = ({
     <FormControl sx={{ flexGrow: 1, width: 'auto' }}>
       <RadioGroup
         row
-        value={userAnswer}
+        // ⬇️ Give an empty string to set the component as 'controlled'.
+        value={userAnswer ?? ''}
         onChange={(e) => onChange(parseInt(e.target.value, 10))}
-        sx={{ flexWrap: 'nowrap', justifyContent: 'space-between' }}
+        sx={{ flexWrap: 'nowrap', justifyContent: 'space-evenly' }}
       >
         {getRadios()}
       </RadioGroup>
