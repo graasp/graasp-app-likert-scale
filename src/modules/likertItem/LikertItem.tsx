@@ -9,11 +9,12 @@ import Typography from '@mui/material/Typography';
 
 import { LabelPosition } from '@/config/appSettings';
 
-const LikertLabel: FC<{ label: string; required: boolean }> = ({
+const LikertLabel: FC<{ label: string; required: boolean; width?: string }> = ({
   label,
   required,
+  width,
 }) => (
-  <Typography sx={{ mb: 1 }} variant="h6">
+  <Typography sx={{ mb: 1, width }} variant="h6">
     {label}
     {required && <sup>*</sup>}
   </Typography>
@@ -88,16 +89,37 @@ const LikertItem: FC<LikertItemProps> = ({
     return compArray;
   };
 
-  const labelComp = <LikertLabel label={label} required={required} />;
+  const getWidthForLikertLabel = (): string =>
+    labelDirection === 'column' ? 'auto' : '25%';
+
+  const labelComp = (
+    <LikertLabel
+      label={label}
+      required={required}
+      width={getWidthForLikertLabel()}
+    />
+  );
+
+  const getWidthForLikertComp = (): string => {
+    if (labelDirection === 'column') {
+      return 'auto';
+    }
+    return labelPosition === LabelPosition.Ends ? '50%' : '75%';
+  };
 
   const likertComp = (
-    <FormControl sx={{ flexGrow: 1, width: 'auto' }}>
+    <FormControl sx={{ width: getWidthForLikertComp() }}>
       <RadioGroup
         row
         // ⬇️ Give an empty string to set the component as 'controlled'.
         value={userAnswer ?? ''}
         onChange={(e) => onChange(parseInt(e.target.value, 10))}
-        sx={{ flexWrap: 'nowrap', justifyContent: 'space-evenly' }}
+        sx={{
+          flexWrap: 'nowrap',
+          justifyContent: 'space-evenly',
+          ml: 2,
+          mr: 2,
+        }}
       >
         {getRadios()}
       </RadioGroup>
@@ -119,7 +141,11 @@ const LikertItem: FC<LikertItemProps> = ({
     >
       {getComponentsInOrder()}
       {showSecondLabel && (
-        <LikertLabel label={secondLabel || ''} required={false} />
+        <LikertLabel
+          label={secondLabel || ''}
+          required={false}
+          width={getWidthForLikertLabel()}
+        />
       )}
     </Stack>
   );
