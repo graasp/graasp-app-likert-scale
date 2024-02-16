@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/graasp/graasp-app-likert-scale/compare/v1.0.1...v1.0.2) (2024-02-15)
+
+
+### Bug Fixes
+
+* center and align radio buttons ([abb1408](https://github.com/graasp/graasp-app-likert-scale/commit/abb14083146d786044e673df3d07d3d77a36a044))
+* center and align radio buttons ([4a40646](https://github.com/graasp/graasp-app-likert-scale/commit/4a40646c47f2a40a2602b63b65c646cc4dccccee)), closes [#22](https://github.com/graasp/graasp-app-likert-scale/issues/22)
+
 ## [1.0.1](https://github.com/graasp/graasp-app-likert-scale/compare/v1.0.0...v1.0.1) (2024-02-13)
 
 
