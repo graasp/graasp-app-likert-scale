@@ -1856,9 +1856,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/code-coverage@npm:3.12.22":
-  version: 3.12.22
-  resolution: "@cypress/code-coverage@npm:3.12.22"
+"@cypress/code-coverage@npm:3.12.23":
+  version: 3.12.23
+  resolution: "@cypress/code-coverage@npm:3.12.23"
   dependencies:
     "@cypress/webpack-preprocessor": "npm:^6.0.0"
     chalk: "npm:4.1.2"
@@ -1875,7 +1875,7 @@ __metadata:
     babel-loader: ^8.3 || ^9
     cypress: "*"
     webpack: ^4 || ^5
-  checksum: 10/f6465a4bc461a386c5d72d6455e8c087e4a750aae2ec2ede0cf8218ff121256a6e61e9dcf2f10d7eba0f1968de12110f57ca116fbe51d063b83fad6445defb32
+  checksum: 10/feee095eed4a10a638e8f2cfe3c213b644a28205ef50907d5194634d3f795df9f6f420883d76862d8ff674890b5b92c4615aa4861f5d99189696f717784f4778
   languageName: node
   linkType: hard
 
@@ -6561,7 +6561,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:18.6.1"
     "@commitlint/config-conventional": "npm:18.6.2"
-    "@cypress/code-coverage": "npm:3.12.22"
+    "@cypress/code-coverage": "npm:3.12.23"
     "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@fontsource/roboto": "npm:^5.0.8"
@@ -6598,7 +6598,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.1.3"
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:4.6.0"
-    husky: "npm:9.0.10"
+    husky: "npm:9.0.11"
     i18next: "npm:23.8.2"
     lodash.isequal: "npm:^4.5.0"
     miragejs: "npm:^0.1.48"
@@ -6849,12 +6849,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:9.0.10":
-  version: 9.0.10
-  resolution: "husky@npm:9.0.10"
+"husky@npm:9.0.11":
+  version: 9.0.11
+  resolution: "husky@npm:9.0.11"
   bin:
     husky: bin.mjs
-  checksum: 10/c303f1862e2b63873605df55a2b08303155e35c799585d7dd677628f62d716e7304bd984fc7d00ec44e740caac07d51720d1a0abb0a23a70a38859d89eb8e72d
+  checksum: 10/8a9b7cb9dc8494b470b3b47b386e65d579608c6206da80d3cc8b71d10e37947264af3dfe00092368dad9673b51d2a5ee87afb4b2291e77ba9e7ec1ac36e56cd1
   languageName: node
   linkType: hard
 
