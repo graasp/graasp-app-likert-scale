@@ -9,12 +9,16 @@ import Typography from '@mui/material/Typography';
 
 import { LabelPosition } from '@/config/appSettings';
 
-const LikertLabel: FC<{ label: string; required: boolean; width?: string }> = ({
-  label,
-  required,
-  width,
-}) => (
-  <Typography sx={{ mb: 1, width }} variant="h6">
+const LikertLabel: FC<{
+  label: string;
+  required: boolean;
+  width?: string;
+  alignRight: boolean;
+}> = ({ label, required, width, alignRight }) => (
+  <Typography
+    sx={{ mb: 1, width, textAlign: alignRight ? 'right' : 'left' }}
+    variant="h6"
+  >
     {label}
     {required && <sup>*</sup>}
   </Typography>
@@ -97,6 +101,7 @@ const LikertItem: FC<LikertItemProps> = ({
       label={label}
       required={required}
       width={getWidthForLikertLabel()}
+      alignRight={labelPosition === LabelPosition.Ends}
     />
   );
 
@@ -145,6 +150,7 @@ const LikertItem: FC<LikertItemProps> = ({
           label={secondLabel || ''}
           required={false}
           width={getWidthForLikertLabel()}
+          alignRight={false}
         />
       )}
     </Stack>
