@@ -27,6 +27,7 @@ const defaultSettingsValues: AllSettingsType = {
   },
   general: {
     required: false,
+    autosubmit: false,
   },
   levels: {
     levels: 5,
