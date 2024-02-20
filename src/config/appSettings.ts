@@ -20,4 +20,5 @@ export type LikertItemSettings = {
 
 export type GeneralSettings = {
   required: boolean;
+  autosubmit: boolean;
 };

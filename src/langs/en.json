@@ -58,7 +58,9 @@
       },
       "GENERAL": {
         "TITLE": "General",
-        "REQUIRED_SWITCH_LABEL": "Mark the question as required."
+        "REQUIRED_SWITCH_LABEL": "Mark the question as required.",
+        "AUTOSUBMIT_SWITCH_LABEL": "Submit the answer automatically",
+        "AUTOSUBMIT_MORE_INFO": "If this option is not enabled, the users will have to click on a submit button to send his or her answer."
       }
     }
   }
