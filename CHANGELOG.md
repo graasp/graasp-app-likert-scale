@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.1.0](https://github.com/graasp/graasp-app-likert-scale/compare/v1.0.2...v1.1.0) (2024-02-20)
+
+
+### Features
+
+* add autosubmit feature ([0c3f40c](https://github.com/graasp/graasp-app-likert-scale/commit/0c3f40c72395e18bc56365df3da6ad3c172ad42e)), closes [#23](https://github.com/graasp/graasp-app-likert-scale/issues/23)
+* auto submit answer ([56c6bd6](https://github.com/graasp/graasp-app-likert-scale/commit/56c6bd613e84334094c1dcfae05bc450943cc72c))
+* autosubmit setting ([8533ee0](https://github.com/graasp/graasp-app-likert-scale/commit/8533ee020b55e1420c7254729983105b1b0d6fd1))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/apps-query-client to v3.4.4 ([322ede1](https://github.com/graasp/graasp-app-likert-scale/commit/322ede15b6b13d65206eccb9d4d9be4b07cc7ceb))
+* **deps:** update dependency @sentry/react to v7.101.1 ([fbdfb2d](https://github.com/graasp/graasp-app-likert-scale/commit/fbdfb2d13418c3d9a954267470943f4ba3933143))
+* **deps:** update dependency @types/node to v20.11.19 ([62b8008](https://github.com/graasp/graasp-app-likert-scale/commit/62b8008b9b7990f97f4e10ab22bd4b49184c402e))
+* **deps:** update dependency @types/react to v18.2.56 ([5ac24e5](https://github.com/graasp/graasp-app-likert-scale/commit/5ac24e5408720524a0f85b7b740a0093ea176935))
+* **deps:** update dependency i18next to v23.8.3 ([b120828](https://github.com/graasp/graasp-app-likert-scale/commit/b120828918848f8642669df077a2c01e2b35ad29))
+* **deps:** update dependency i18next to v23.9.0 ([6bff6be](https://github.com/graasp/graasp-app-likert-scale/commit/6bff6beea60f03ee47d2b0d08e88256393ebedf1))
+* **deps:** update mui (non-major) ([5c32549](https://github.com/graasp/graasp-app-likert-scale/commit/5c3254959aa3294a7687b0d33672828b51a3039b))
+
 ## [1.0.2](https://github.com/graasp/graasp-app-likert-scale/compare/v1.0.1...v1.0.2) (2024-02-15)
 
 
