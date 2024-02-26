@@ -1,7 +1,7 @@
 {
   "name": "graasp-app-likert-scale",
   "description": "A basic app to create Likert scale items on Graasp.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "AGPL-3.0-only",
   "author": "Graasp",
   "repository": {
