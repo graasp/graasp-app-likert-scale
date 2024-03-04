@@ -39,11 +39,12 @@ export const defaultMockContext: LocalContext = {
 
 export const mockItem: DiscriminatedItem = {
   id: defaultMockContext.itemId,
-  name: 'app-starter-ts-vite',
+  name: 'app-likert-scale',
   description: null,
   path: '',
   settings: {},
   type: ItemType.APP,
+  lang: 'en',
   extra: { [ItemType.APP]: { url: 'http://localhost:3002' } },
   creator: mockMembers[0],
   createdAt: new Date().toISOString(),
