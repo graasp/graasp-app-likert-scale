@@ -9,7 +9,7 @@ import {
 } from 'react';
 
 import { useLocalContext } from '@graasp/apps-query-client';
-import { PermissionLevel, PermissionLevelCompare } from '@graasp/sdk';
+import { AppData, PermissionLevel, PermissionLevelCompare } from '@graasp/sdk';
 
 import {
   AppDataType,
@@ -63,7 +63,7 @@ export const UserAnswersProvider: FC<{
   useEffect(() => {
     if (isSuccess) {
       const allAns = data.filter(
-        (d) => d.type === AppDataType.UserAnswer,
+        (d: AppData) => d.type === AppDataType.UserAnswer,
       ) as UserAnswerAppData[];
       setAllAnswersAppData(allAns);
       setUserAnswerAppData(allAns.find((d) => d.member.id === memberId));
