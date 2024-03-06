@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.3](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.2...v1.1.3) (2024-03-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/apps-query-client to v3.4.8 ([#49](https://github.com/graasp/graasp-app-likert-scale/issues/49)) ([f279d82](https://github.com/graasp/graasp-app-likert-scale/commit/f279d82629f506b445de32fc296a32a3ba676368))
+* **deps:** update dependency @graasp/sdk to v4.1.0 ([#51](https://github.com/graasp/graasp-app-likert-scale/issues/51)) ([1725a29](https://github.com/graasp/graasp-app-likert-scale/commit/1725a29bc969bbb1f886526682b141f322046db5))
+* **deps:** update mui (non-major) ([#81](https://github.com/graasp/graasp-app-likert-scale/issues/81)) ([5d598f9](https://github.com/graasp/graasp-app-likert-scale/commit/5d598f9e9829550f4a9f9a6e97e01195f7c1f777))
+* **deps:** update react monorepo ([#78](https://github.com/graasp/graasp-app-likert-scale/issues/78)) ([f070f40](https://github.com/graasp/graasp-app-likert-scale/commit/f070f40fc272c3163cec14c628e236f3939b5e13))
+
 ## [1.1.2](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.1...v1.1.2) (2024-03-04)
 
 
