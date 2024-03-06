@@ -2329,9 +2329,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graasp/apps-query-client@npm:3.4.7":
-  version: 3.4.7
-  resolution: "@graasp/apps-query-client@npm:3.4.7"
+"@graasp/apps-query-client@npm:3.4.8":
+  version: 3.4.8
+  resolution: "@graasp/apps-query-client@npm:3.4.8"
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.0"
@@ -2352,7 +2352,7 @@ __metadata:
     date-fns: ^3.3.0
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10/92c197cbb25e05cf11318171c10f5071ec9e654f9647563fe92ecaaad26309242007657db5bc87ea0407aa8c519579e1dd2ec475ba06f90e271e4eb23b0d5db2
+  checksum: 10/ce70f4ff13d32e7c3c19a145e6290ed2eef33e3116e364b4e4ffb0f5e5585a4042a3085037d330de63d00ee14592394e420c9021126fc512294f88c36df56061
   languageName: node
   linkType: hard
 
@@ -6573,7 +6573,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.0"
     "@fontsource/roboto": "npm:^5.0.8"
-    "@graasp/apps-query-client": "npm:3.4.7"
+    "@graasp/apps-query-client": "npm:3.4.8"
     "@graasp/sdk": "npm:4.1.0"
     "@mui/icons-material": "npm:5.15.12"
     "@mui/lab": "npm:5.0.0-alpha.167"
