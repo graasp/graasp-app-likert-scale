@@ -100,7 +100,7 @@
     "uuid": "9.0.1",
     "vite": "^5.0.12",
     "vite-plugin-checker": "^0.6.2",
-    "vite-plugin-istanbul": "^5.0.0"
+    "vite-plugin-istanbul": "^6.0.0"
   },
   "browserslist": {
     "production": [
