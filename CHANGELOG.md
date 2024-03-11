@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.4](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.3...v1.1.4) (2024-03-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/react to v7.106.0 ([#90](https://github.com/graasp/graasp-app-likert-scale/issues/90)) ([cc7789d](https://github.com/graasp/graasp-app-likert-scale/commit/cc7789de5b00b7cfff5db47833efbcd130d330ef))
+* **deps:** update dependency @types/node to v20.11.25 ([#84](https://github.com/graasp/graasp-app-likert-scale/issues/84)) ([c0c908b](https://github.com/graasp/graasp-app-likert-scale/commit/c0c908b588e1c2c6da1df800927dbd9c118fd196))
+* **deps:** update dependency i18next to v23.10.1 ([#89](https://github.com/graasp/graasp-app-likert-scale/issues/89)) ([022d0e9](https://github.com/graasp/graasp-app-likert-scale/commit/022d0e9541498bfa60598e40943c2a95f976457f))
+* **deps:** update dependency react-i18next to v14.1.0 ([#88](https://github.com/graasp/graasp-app-likert-scale/issues/88)) ([0ec822b](https://github.com/graasp/graasp-app-likert-scale/commit/0ec822b08d4af19bc91b935b17a505a8ed15e23f))
+* **deps:** update dependency typescript to v5.4.2 ([#85](https://github.com/graasp/graasp-app-likert-scale/issues/85)) ([b641dcc](https://github.com/graasp/graasp-app-likert-scale/commit/b641dcc0baea3b9cb39d11a2eba2162e005d9763))
+* **deps:** update react monorepo ([#87](https://github.com/graasp/graasp-app-likert-scale/issues/87)) ([a3306b4](https://github.com/graasp/graasp-app-likert-scale/commit/a3306b415f4422157202d27059efbdfbf2dca355))
+
 ## [1.1.3](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.2...v1.1.3) (2024-03-06)
 
 
