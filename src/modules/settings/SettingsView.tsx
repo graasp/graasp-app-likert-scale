@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 
 import isEqual from 'lodash.isequal';
 
+import { version } from '@/../package.json';
 import {
   GeneralSettings,
   LevelsSettings,
@@ -66,17 +67,18 @@ const SettingsView: FC = () => {
   return (
     <Stack data-cy={SETTINGS_VIEW_CY} spacing={2}>
       <Typography variant="h1">{t('SETTINGS.TITLE')}</Typography>
+      <Typography variant="caption">{t('VERSION', { version })}</Typography>
       <GeneralSettingsEdit general={general} onChange={setGeneral} />
-      <LevelsSettingsEdit
-        levels={levels}
-        onChange={(newSetting: LevelsSettings) => {
-          setLevels(newSetting);
-        }}
-      />
       <LikertItemSettingsEdit
         likertItem={likertItem}
         onChange={(newSetting: LikertItemSettings) => {
           setLikertItem({ ...newSetting });
+        }}
+      />
+      <LevelsSettingsEdit
+        levels={levels}
+        onChange={(newSetting: LevelsSettings) => {
+          setLevels(newSetting);
         }}
       />
       <Box>

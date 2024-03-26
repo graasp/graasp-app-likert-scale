@@ -20,7 +20,7 @@ const LikertLabel: FC<{
     variant="h6"
   >
     {label}
-    {required && <sup>*</sup>}
+    {required && label.length > 0 && <sup>*</sup>}
   </Typography>
 );
 
