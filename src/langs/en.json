@@ -2,6 +2,7 @@
   "translations": {
     "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit",
     "Answers": "Answers",
+    "VERSION": "Version {{ version }}",
     "MCQ": {
       "SUBMIT_OK_TOOLTIP": "Your answer has been submitted.",
       "SUBMIT_OK_HELPER": "Submitted",
