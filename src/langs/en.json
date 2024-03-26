@@ -31,9 +31,9 @@
       "TITLE": "Settings",
       "SAVE_BTN": "Save",
       "LEVELS": {
-        "TITLE": "Levels",
+        "TITLE": "Scale",
         "NBR_LEVELS_LABEL": "Number of levels",
-        "HELPER_ERROR_NBR_LEVELS": "Enter a level between 2 and {{ maxNumberLevels }}.",
+        "HELPER_ERROR_NBR_LEVELS": "Enter a number between 2 and {{ maxNumberLevels }}.",
         "LABEL_LEVEL_N": "Label level {{ n }}",
         "LABELS": "Labels"
       },
@@ -45,7 +45,7 @@
           "KEY_HELP_WARNING": "Please, provide a key.",
           "KEY_HELPER": "Enter a unique identifier for your item.",
           "KEY_LABEL": "Key",
-          "LABEL_LABEL": "Label",
+          "LABEL_LABEL": "Question or statement",
           "SECOND_LABEL_LABEL": "Right label",
           "VALUE_LABEL": "Value",
           "ANSWER_LABEL": "Answer",
