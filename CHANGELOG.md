@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.7...v1.2.0) (2024-03-26)
+
+
+### Features
+
+* remove asterisk when label length is zero ([#136](https://github.com/graasp/graasp-app-likert-scale/issues/136)) ([4b18d7e](https://github.com/graasp/graasp-app-likert-scale/commit/4b18d7ee4e61da78a408e94c395b69b2cde1dbd6))
+
 ## [1.1.7](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.6...v1.1.7) (2024-03-26)
 
 
