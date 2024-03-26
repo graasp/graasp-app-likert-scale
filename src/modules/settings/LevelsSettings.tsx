@@ -5,6 +5,8 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
+import cloneDeep from 'lodash.clonedeep';
+
 import { LevelsSettings } from '@/config/appSettings';
 import { MAX_NUMBER_OF_LEVELS } from '@/config/constants';
 import {
@@ -48,10 +50,11 @@ const LevelsSettingsEdit: FC<{
     }
   };
   const handleLabelChange = (newLabel: string, index: number): void => {
-    labels[index] = newLabel;
+    const newLabels = cloneDeep(labels);
+    newLabels[index] = newLabel;
     onChange({
       levels: numberOfLevels,
-      labels,
+      labels: newLabels,
     });
   };
   return (
