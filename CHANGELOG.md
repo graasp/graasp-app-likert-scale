@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.0...v1.2.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/react to v18.2.72 ([#138](https://github.com/graasp/graasp-app-likert-scale/issues/138)) ([7e95f3d](https://github.com/graasp/graasp-app-likert-scale/commit/7e95f3d8b6780bde52129be48e3f0854dfb9a5f7))
+
 ## [1.2.0](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.7...v1.2.0) (2024-03-26)
 
 
