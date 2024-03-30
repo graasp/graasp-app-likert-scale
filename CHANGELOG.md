@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.1](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.0...v1.2.1) (2024-03-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/styled to v11.11.5 ([#145](https://github.com/graasp/graasp-app-likert-scale/issues/145)) ([39b840e](https://github.com/graasp/graasp-app-likert-scale/commit/39b840e6411b4bafba7e6fb0519df14b699f726f))
+* **deps:** update dependency @graasp/sdk to v4.4.0 ([#141](https://github.com/graasp/graasp-app-likert-scale/issues/141)) ([ce63c8b](https://github.com/graasp/graasp-app-likert-scale/commit/ce63c8bedffc8f041b7d912be1b491ab04987e9e))
+* **deps:** update dependency @sentry/react to v7.109.0 ([#143](https://github.com/graasp/graasp-app-likert-scale/issues/143)) ([9c84f63](https://github.com/graasp/graasp-app-likert-scale/commit/9c84f631a3e0f82682e6745bd7ae757efe78aac4))
+* **deps:** update dependency @types/node to v20.12.2 ([#146](https://github.com/graasp/graasp-app-likert-scale/issues/146)) ([b7893f5](https://github.com/graasp/graasp-app-likert-scale/commit/b7893f567f95b66f7c96bd9fb7f997a8667d81c1))
+* **deps:** update dependency @types/react to v18.2.72 ([#138](https://github.com/graasp/graasp-app-likert-scale/issues/138)) ([7e95f3d](https://github.com/graasp/graasp-app-likert-scale/commit/7e95f3d8b6780bde52129be48e3f0854dfb9a5f7))
+* **deps:** update dependency @types/react to v18.2.73 ([#140](https://github.com/graasp/graasp-app-likert-scale/issues/140)) ([b3bdee5](https://github.com/graasp/graasp-app-likert-scale/commit/b3bdee5617f86755eb9dd6b0b7ed8cd92f880fa2))
+* **deps:** update dependency @types/react-dom to v18.2.23 ([#142](https://github.com/graasp/graasp-app-likert-scale/issues/142)) ([d40fd36](https://github.com/graasp/graasp-app-likert-scale/commit/d40fd368a1e860938a7e310385a92b8011d49609))
+
 ## [1.2.0](https://github.com/graasp/graasp-app-likert-scale/compare/v1.1.7...v1.2.0) (2024-03-26)
 
 
