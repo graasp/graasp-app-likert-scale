@@ -5,7 +5,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+
+import { QuestionLabel } from '@graasp/ui/apps';
 
 import { LabelPosition } from '@/config/appSettings';
 
@@ -15,13 +16,17 @@ const LikertLabel: FC<{
   width?: string;
   alignRight: boolean;
 }> = ({ label, required, width, alignRight }) => (
-  <Typography
-    sx={{ mb: 1, width, textAlign: alignRight ? 'right' : 'left' }}
-    variant="h6"
+  <QuestionLabel
+    width={width}
+    typographyProps={{
+      sx: { textAlign: alignRight ? 'right' : 'left' },
+    }}
   >
-    {label}
-    {required && label.length > 0 && <sup>*</sup>}
-  </Typography>
+    <>
+      {label}
+      {required && label.length > 0 && <sup>*</sup>}
+    </>
+  </QuestionLabel>
 );
 
 interface LikertItemProps {
