@@ -1,44 +1,49 @@
 import { AppSetting } from '@graasp/sdk';
 
+import {
+  GeneralSettings,
+  LabelPosition,
+  LevelsSettings,
+  LikertItemSettings,
+} from '@/config/appSettings';
+
 import { MOCK_SERVER_DISCRIMINATED_ITEM } from './mockItem';
 
-export const QUESTION_SETTING: AppSetting = {
+export const LEVELS_SETTING: AppSetting<LevelsSettings> = {
   id: '0',
-  name: 'question',
+  name: 'levels',
   data: {
-    label: 'Is the question field working?',
+    levels: 7,
+    labels: [],
   },
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
   item: MOCK_SERVER_DISCRIMINATED_ITEM,
 };
 
-export const ANSWERS_SETTING = {
+export const LIKERT_ITEM_SETTING: AppSetting<LikertItemSettings> = {
   id: '1',
-  name: 'answers',
+  name: 'likertItem',
   data: {
-    answers: [
-      {
-        key: 'fine',
-        label: "It's working fine",
-      },
-      {
-        key: 'well',
-        label: "It's working well",
-      },
-    ],
-    defaultAnswer: [],
-    multipleAnswers: false,
+    item: {
+      key: 'item1',
+      label: 'How do the test pass?',
+    },
+    labelPosition: LabelPosition.Top,
   },
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
   item: MOCK_SERVER_DISCRIMINATED_ITEM,
 };
 
-export const ANSWERS_SETTING_MULTI_ANSWERS = {
-  ...ANSWERS_SETTING,
+export const GENERAL_SETTING: AppSetting<GeneralSettings> = {
+  id: '2',
+  name: 'general',
   data: {
-    ...ANSWERS_SETTING.data,
-    multipleAnswers: true,
+    required: true,
+    autosubmit: false,
   },
+  createdAt: new Date().toISOString(),
+  updatedAt: new Date().toISOString(),
+  item: MOCK_SERVER_DISCRIMINATED_ITEM,
 };

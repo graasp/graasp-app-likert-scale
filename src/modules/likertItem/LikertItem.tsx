@@ -5,9 +5,11 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+
+import { QuestionLabel } from '@graasp/ui/apps';
 
 import { LabelPosition } from '@/config/appSettings';
+import { LIKERT_LABEL_CY, makeRadioAnswerCy } from '@/config/selectors';
 
 const LikertLabel: FC<{
   label: string;
@@ -15,13 +17,18 @@ const LikertLabel: FC<{
   width?: string;
   alignRight: boolean;
 }> = ({ label, required, width, alignRight }) => (
-  <Typography
-    sx={{ mb: 1, width, textAlign: alignRight ? 'right' : 'left' }}
-    variant="h6"
+  <QuestionLabel
+    width={width}
+    typographyProps={{
+      sx: { textAlign: alignRight ? 'right' : 'left' },
+    }}
+    dataCy={LIKERT_LABEL_CY}
   >
-    {label}
-    {required && label.length > 0 && <sup>*</sup>}
-  </Typography>
+    <>
+      {label}
+      {required && label.length > 0 && <sup>*</sup>}
+    </>
+  </QuestionLabel>
 );
 
 interface LikertItemProps {
@@ -83,7 +90,7 @@ const LikertItem: FC<LikertItemProps> = ({
       compArray.push(
         <FormControlLabel
           value={l}
-          control={<Radio />}
+          control={<Radio data-cy={makeRadioAnswerCy(l)} />}
           label={levelsLabels[l]}
           labelPlacement="bottom"
           sx={{ flex: '0 1 auto' }}
