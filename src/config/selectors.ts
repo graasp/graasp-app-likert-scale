@@ -15,11 +15,16 @@ export const makeSettingsAnswersInputKeyCy = (index: number): string =>
 export const makeSettingsAnswersRowCy = (index: number): string =>
   `settings-answers-row-${index}`;
 
-export const MCQ_QUESTION_CY = 'mcq-question';
-export const makeMcqAnswersCy = (index: number): string =>
-  `mcq-answer-${index}`;
-export const makeMcqMultipleAnswersCy = (index: number): string =>
-  `mcq-multiple-answer-${index}`;
+export const SUBMIT_BTN_CY = 'submit-button';
+export const RESET_BTN_CY = 'reset-button';
+export const LIKERT_LABEL_CY = 'likert-label';
+
+export const REQUIRED_CHIP_CY = 'required-chip';
+export const SAVED_CHIP_CY = 'saved-chip';
+export const SUBMITTED_CHIP_CY = 'submitted-chip';
+
+export const makeRadioAnswerCy = (index: number): string =>
+  `likert-item-radio-${index}`;
 
 export const makeLabelFieldForLevelCy = (index: number): string =>
   `label-field-for-level-${index}`;

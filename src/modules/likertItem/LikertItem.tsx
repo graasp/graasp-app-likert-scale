@@ -9,6 +9,7 @@ import Stack from '@mui/material/Stack';
 import { QuestionLabel } from '@graasp/ui/apps';
 
 import { LabelPosition } from '@/config/appSettings';
+import { LIKERT_LABEL_CY, makeRadioAnswerCy } from '@/config/selectors';
 
 const LikertLabel: FC<{
   label: string;
@@ -21,6 +22,7 @@ const LikertLabel: FC<{
     typographyProps={{
       sx: { textAlign: alignRight ? 'right' : 'left' },
     }}
+    dataCy={LIKERT_LABEL_CY}
   >
     <>
       {label}
@@ -88,7 +90,7 @@ const LikertItem: FC<LikertItemProps> = ({
       compArray.push(
         <FormControlLabel
           value={l}
-          control={<Radio />}
+          control={<Radio data-cy={makeRadioAnswerCy(l)} />}
           label={levelsLabels[l]}
           labelPlacement="bottom"
           sx={{ flex: '0 1 auto' }}

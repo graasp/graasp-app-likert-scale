@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -13,6 +14,13 @@ import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 
+import {
+  REQUIRED_CHIP_CY,
+  RESET_BTN_CY,
+  SAVED_CHIP_CY,
+  SUBMITTED_CHIP_CY,
+  SUBMIT_BTN_CY,
+} from '@/config/selectors';
 import { UserAnswerStatus } from '@/interfaces/userAnswer';
 
 import { useSettings } from '../context/SettingsContext';
@@ -58,6 +66,7 @@ const ItemView: FC = () => {
               icon={<CheckCircleOutlineIcon />}
               label={t('SUBMIT_OK_HELPER')}
               variant="outlined"
+              data-cy={SUBMITTED_CHIP_CY}
             />
           </Tooltip>
         )}
@@ -67,6 +76,7 @@ const ItemView: FC = () => {
               icon={<BackupIcon />}
               label={t('SAVED_HELPER')}
               variant="outlined"
+              data-cy={SAVED_CHIP_CY}
             />
           </Tooltip>
         )}
@@ -77,6 +87,7 @@ const ItemView: FC = () => {
               icon={<WarningIcon />}
               label={t('REQUIRED_CHIP')}
               variant="outlined"
+              data-cy={REQUIRED_CHIP_CY}
             />
           </Tooltip>
         )}
@@ -88,6 +99,7 @@ const ItemView: FC = () => {
                 variant="outlined"
                 onClick={() => deleteAnswer()}
                 startIcon={<ReplayIcon />}
+                data-cy={RESET_BTN_CY}
               >
                 {t('RESET')}
               </Button>
@@ -99,6 +111,7 @@ const ItemView: FC = () => {
               variant="contained"
               onClick={() => submitAnswer()}
               startIcon={<SendIcon />}
+              data-cy={SUBMIT_BTN_CY}
             >
               {t('SUBMIT')}
             </Button>
