@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.5](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.4...v1.2.5) (2024-04-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @fontsource/roboto to v5.0.13 ([#184](https://github.com/graasp/graasp-app-likert-scale/issues/184)) ([b28141c](https://github.com/graasp/graasp-app-likert-scale/commit/b28141ccd2e2326f8b2dc202dc886d7384378907))
+* **deps:** update dependency @graasp/ui to v4.15.0 ([#181](https://github.com/graasp/graasp-app-likert-scale/issues/181)) ([68c9fce](https://github.com/graasp/graasp-app-likert-scale/commit/68c9fceeb2268cccdce5d815bc82d7456e737a66))
+* **deps:** update dependency @sentry/react to v7.110.0 ([#173](https://github.com/graasp/graasp-app-likert-scale/issues/173)) ([ecedef3](https://github.com/graasp/graasp-app-likert-scale/commit/ecedef3b752a3aaef1845854e4be7107aa7e5d72))
+* **deps:** update dependency @sentry/react to v7.110.1 ([#180](https://github.com/graasp/graasp-app-likert-scale/issues/180)) ([1ef1bd2](https://github.com/graasp/graasp-app-likert-scale/commit/1ef1bd210acf0453e8e8c9616ce8c969ab3c0aa0))
+* **deps:** update dependency @types/react to v18.2.79 ([#175](https://github.com/graasp/graasp-app-likert-scale/issues/175)) ([5fc4651](https://github.com/graasp/graasp-app-likert-scale/commit/5fc46510d1e72a155defd33892e9b910b4740cb1))
+* **deps:** update dependency i18next to v23.11.2 ([#178](https://github.com/graasp/graasp-app-likert-scale/issues/178)) ([c21b89e](https://github.com/graasp/graasp-app-likert-scale/commit/c21b89efce5af952670972e5053356bc0be7f51d))
+* **deps:** update react monorepo ([#172](https://github.com/graasp/graasp-app-likert-scale/issues/172)) ([c8704eb](https://github.com/graasp/graasp-app-likert-scale/commit/c8704eb5aabd60330987ea0d8cb9f186e023fa40))
+
 ## [1.2.4](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.3...v1.2.4) (2024-04-11)
 
 
