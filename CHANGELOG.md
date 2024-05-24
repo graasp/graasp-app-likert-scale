@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.7](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.6...v1.2.7) (2024-05-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/react to v7.113.0 ([#210](https://github.com/graasp/graasp-app-likert-scale/issues/210)) ([2db5adc](https://github.com/graasp/graasp-app-likert-scale/commit/2db5adcbeca460346892843f52fd9549cd547439))
+* **deps:** update dependency @sentry/react to v7.116.0 ([#215](https://github.com/graasp/graasp-app-likert-scale/issues/215)) ([df61000](https://github.com/graasp/graasp-app-likert-scale/commit/df61000d126196383dbb61e4895a4b60f72b0216))
+* **deps:** update dependency @types/node to v20.12.10 ([#214](https://github.com/graasp/graasp-app-likert-scale/issues/214)) ([7374cce](https://github.com/graasp/graasp-app-likert-scale/commit/7374cce41bce45a03bfac31cd45a8cb538c13a84))
+* **deps:** update dependency @types/node to v20.12.12 ([#216](https://github.com/graasp/graasp-app-likert-scale/issues/216)) ([fd0a47a](https://github.com/graasp/graasp-app-likert-scale/commit/fd0a47afea849fd91a176db7cac4d5a166ddda74))
+* **deps:** update dependency @types/react to v18.3.3 ([#222](https://github.com/graasp/graasp-app-likert-scale/issues/222)) ([18b37b7](https://github.com/graasp/graasp-app-likert-scale/commit/18b37b72f7abaf502367d4dad2fb4339873aa692))
+* **deps:** update dependency i18next to v23.11.5 ([#220](https://github.com/graasp/graasp-app-likert-scale/issues/220)) ([e416100](https://github.com/graasp/graasp-app-likert-scale/commit/e4161003f317b7605b819baa000076b6f9a5a4b3))
+* **deps:** update dependency react-i18next to v14.1.2 ([#223](https://github.com/graasp/graasp-app-likert-scale/issues/223)) ([28a70a7](https://github.com/graasp/graasp-app-likert-scale/commit/28a70a7ebca0fe420b731e1017ba34dd14613d24))
+* **deps:** update mui (non-major) to v5.15.18 ([#217](https://github.com/graasp/graasp-app-likert-scale/issues/217)) ([2340f59](https://github.com/graasp/graasp-app-likert-scale/commit/2340f59449957b75d77d9310321f9e544d22893a))
+
 ## [1.2.6](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.5...v1.2.6) (2024-05-06)
 
 
