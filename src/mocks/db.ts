@@ -1,32 +1,31 @@
 import type { Database, LocalContext } from '@graasp/apps-query-client';
 import {
+  AppItemFactory,
   CompleteMember,
-  DiscriminatedItem,
   ItemType,
+  MemberFactory,
   PermissionLevel,
 } from '@graasp/sdk';
 
 import { API_HOST } from '@/config/env';
 
 export const mockMembers: CompleteMember[] = [
-  {
+  MemberFactory({
     id: 'mock-member-id-1',
     name: 'I (current member)',
     email: 'i@graasp.org',
-    extra: {},
     type: 'individual',
     createdAt: new Date('1996-09-08T19:00:00').toISOString(),
     updatedAt: new Date().toISOString(),
-  },
-  {
+  }),
+  MemberFactory({
     id: 'mock-member-id-2',
     name: 'You',
     email: 'you@graasp.org',
-    extra: {},
     type: 'individual',
     createdAt: new Date('1995-02-02T15:00:00').toISOString(),
     updatedAt: new Date().toISOString(),
-  },
+  }),
 ];
 
 export const defaultMockContext: LocalContext = {
@@ -37,19 +36,16 @@ export const defaultMockContext: LocalContext = {
   memberId: mockMembers[0].id,
 };
 
-export const mockItem: DiscriminatedItem = {
+export const mockItem = AppItemFactory({
   id: defaultMockContext.itemId,
   name: 'app-likert-scale',
-  description: null,
-  path: '',
-  settings: {},
   type: ItemType.APP,
   lang: 'en',
   extra: { [ItemType.APP]: { url: 'http://localhost:3002' } },
   creator: mockMembers[0],
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
-};
+});
 
 const buildDatabase = (members?: CompleteMember[]): Database => ({
   appData: [],
