@@ -1,18 +1,15 @@
-/* eslint-disable prettier/prettier */
 import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import BackupIcon from '@mui/icons-material/Backup';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ReplayIcon from '@mui/icons-material/Replay';
 import SendIcon from '@mui/icons-material/Send';
-import WarningIcon from '@mui/icons-material/WarningRounded';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
 import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
+
+import { RequiredChip, SavedChip, SubmittedChip } from '@graasp/ui/apps';
 
 import {
   REQUIRED_CHIP_CY,
@@ -60,36 +57,25 @@ const ItemView: FC = () => {
       </Box>
       <Stack width="10rem" direction="column" spacing={1} alignItems="center">
         {userAnswer?.status === UserAnswerStatus.Submitted && (
-          <Tooltip title={t('SUBMIT_OK_TOOLTIP')}>
-            <Chip
-              color="info"
-              icon={<CheckCircleOutlineIcon />}
-              label={t('SUBMIT_OK_HELPER')}
-              variant="outlined"
-              data-cy={SUBMITTED_CHIP_CY}
-            />
-          </Tooltip>
+          <SubmittedChip
+            label={t('SUBMIT_OK_HELPER')}
+            tooltip={t('SUBMIT_OK_TOOLTIP')}
+            dataCy={SUBMITTED_CHIP_CY}
+          />
         )}
         {userAnswer?.status === UserAnswerStatus.Saved && (
-          <Tooltip title={t('SAVED_TOOLTIP')}>
-            <Chip
-              icon={<BackupIcon />}
-              label={t('SAVED_HELPER')}
-              variant="outlined"
-              data-cy={SAVED_CHIP_CY}
-            />
-          </Tooltip>
+          <SavedChip
+            label={t('SAVED_HELPER')}
+            tooltip={t('SAVED_TOOLTIP')}
+            dataCy={SAVED_CHIP_CY}
+          />
         )}
         {typeof userAnswer === 'undefined' && required && (
-          <Tooltip title={t('REQUIRED_TOOLTIP')}>
-            <Chip
-              color="warning"
-              icon={<WarningIcon />}
-              label={t('REQUIRED_CHIP')}
-              variant="outlined"
-              data-cy={REQUIRED_CHIP_CY}
-            />
-          </Tooltip>
+          <RequiredChip
+            label={t('REQUIRED_CHIP')}
+            tooltip={t('REQUIRED_TOOLTIP')}
+            dataCy={REQUIRED_CHIP_CY}
+          />
         )}
         <Stack sx={{ mt: 1 }} direction="column" spacing={1}>
           <Collapse orientation="horizontal" in={showResetButton}>
