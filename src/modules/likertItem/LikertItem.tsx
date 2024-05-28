@@ -93,7 +93,25 @@ const LikertItem: FC<LikertItemProps> = ({
           control={<Radio data-cy={makeRadioAnswerCy(l)} />}
           label={levelsLabels[l]}
           labelPlacement="bottom"
-          sx={{ flex: '0 1 auto' }}
+          sx={{
+            flex: '1 1 0',
+            overflow: 'visible',
+            textOverflow: 'ellipsis',
+            ml: 0.5,
+            mr: 0.5,
+          }}
+          componentsProps={{
+            typography: {
+              sx: {
+                transformOrigin: 'top center',
+                transform: 'rotate(45deg) translate(0.5em, 0)',
+                writingMode: 'sideways-lr',
+                width: '100%',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              },
+            },
+          }}
         />,
       );
     }
@@ -127,10 +145,12 @@ const LikertItem: FC<LikertItemProps> = ({
         value={userAnswer ?? ''}
         onChange={(e) => onChange(parseInt(e.target.value, 10))}
         sx={{
+          display: 'flex',
           flexWrap: 'nowrap',
           justifyContent: 'space-evenly',
           ml: 2,
           mr: 2,
+          // overflow: 'scroll',
         }}
       >
         {getRadios()}
@@ -145,7 +165,8 @@ const LikertItem: FC<LikertItemProps> = ({
     <Stack
       direction={labelDirection}
       spacing={1}
-      alignItems={labelDirection === 'row' ? 'center' : 'flex-start'}
+      // alignItems={labelDirection === 'row' ? 'center' : 'flex-start'}
+      alignItems="flex-start"
       justifyContent={
         labelPosition === LabelPosition.Ends ? 'center' : 'flex-start'
       }
