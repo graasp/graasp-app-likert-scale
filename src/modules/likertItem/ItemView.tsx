@@ -42,7 +42,11 @@ const ItemView: FC = () => {
     [userAnswer],
   );
   return (
-    <Stack spacing={1} justifyContent="space-between" direction="row">
+    <Stack
+      spacing={1}
+      justifyContent="space-between"
+      direction={{ md: 'row', xs: 'column' }}
+    >
       <Box flex={1}>
         <LikertItem
           label={label}
@@ -55,7 +59,12 @@ const ItemView: FC = () => {
           onChange={selectAnswer}
         />
       </Box>
-      <Stack width="10rem" direction="column" spacing={1} alignItems="center">
+      <Stack
+        width={{ md: '10rem', xs: '100%' }}
+        direction={{ md: 'column', xs: 'row-reverse' }}
+        alignItems={{ md: 'center', xs: 'flex-start' }}
+        spacing={1}
+      >
         {userAnswer?.status === UserAnswerStatus.Submitted && (
           <SubmittedChip
             label={t('SUBMIT_OK_HELPER')}
@@ -77,7 +86,11 @@ const ItemView: FC = () => {
             dataCy={REQUIRED_CHIP_CY}
           />
         )}
-        <Stack sx={{ mt: 1 }} direction="column" spacing={1}>
+        <Stack
+          sx={{ mt: 1 }}
+          direction={{ md: 'column', xs: 'row-reverse' }}
+          spacing={1}
+        >
           <Collapse orientation="horizontal" in={showResetButton}>
             <Tooltip title={t('RESET_ANSWER')}>
               <Button
