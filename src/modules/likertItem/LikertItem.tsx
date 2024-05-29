@@ -59,9 +59,6 @@ const LikertItem: FC<LikertItemProps> = ({
   const [inverseComponentsOrder, setInverseComponentsOrder] =
     useState<boolean>(false);
 
-  // eslint-disable-next-line no-console
-  console.log(userAnswer);
-
   useEffect(() => {
     if (
       labelPosition === LabelPosition.Top ||
@@ -150,7 +147,6 @@ const LikertItem: FC<LikertItemProps> = ({
           justifyContent: 'space-evenly',
           ml: 2,
           mr: 2,
-          // overflow: 'scroll',
         }}
       >
         {getRadios()}
@@ -165,7 +161,6 @@ const LikertItem: FC<LikertItemProps> = ({
     <Stack
       direction={labelDirection}
       spacing={1}
-      // alignItems={labelDirection === 'row' ? 'center' : 'flex-start'}
       alignItems="flex-start"
       justifyContent={
         labelPosition === LabelPosition.Ends ? 'center' : 'flex-start'
