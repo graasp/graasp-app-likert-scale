@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.8](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.7...v1.2.8) (2024-05-29)
+
+
+### Bug Fixes
+
+* make likert item responsive for middle sized screens ([#232](https://github.com/graasp/graasp-app-likert-scale/issues/232)) ([dd55838](https://github.com/graasp/graasp-app-likert-scale/commit/dd5583883bdc961191867447ed3ec0330b13da9b))
+
 ## [1.2.7](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.6...v1.2.7) (2024-05-24)
 
 
