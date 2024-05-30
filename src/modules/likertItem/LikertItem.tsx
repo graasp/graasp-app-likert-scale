@@ -101,9 +101,8 @@ const LikertItem: FC<LikertItemProps> = ({
             typography: {
               sx: {
                 transformOrigin: 'top center',
-                transform: 'rotate(45deg) translate(0.5em, 0)',
-                writingMode: 'sideways-lr',
-                width: '100%',
+                transform: 'rotate(-45deg) translate(-0.5em, 0)',
+                writingMode: 'vertical-lr',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
               },
