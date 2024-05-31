@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.9](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.8...v1.2.9) (2024-05-31)
+
+
+### Bug Fixes
+
+* change label orientation ([#239](https://github.com/graasp/graasp-app-likert-scale/issues/239)) ([e117e83](https://github.com/graasp/graasp-app-likert-scale/commit/e117e833bd28b87951dab1e3f740d742f5af843b))
+* **deps:** update dependency @graasp/ui to v4.19.1 ([#234](https://github.com/graasp/graasp-app-likert-scale/issues/234)) ([bfcb80a](https://github.com/graasp/graasp-app-likert-scale/commit/bfcb80ade67efdc4e10b320407d5c3fe6ded733f))
+* **deps:** update mui (non-major) to v5.15.19 ([#235](https://github.com/graasp/graasp-app-likert-scale/issues/235)) ([35b54b1](https://github.com/graasp/graasp-app-likert-scale/commit/35b54b13142654d5d67f6acb2103fb56e610ee6e))
+* don't show required star when labels are on both ends ([#238](https://github.com/graasp/graasp-app-likert-scale/issues/238)) ([a27d7b3](https://github.com/graasp/graasp-app-likert-scale/commit/a27d7b3a153639ed7314175474192e13167da105))
+
 ## [1.2.8](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.7...v1.2.8) (2024-05-29)
 
 
