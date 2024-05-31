@@ -121,7 +121,7 @@ const LikertItem: FC<LikertItemProps> = ({
   const labelComp = (
     <LikertLabel
       label={label}
-      required={required}
+      required={required && labelPosition !== LabelPosition.Ends}
       width={getWidthForLikertLabel()}
       alignRight={labelPosition === LabelPosition.Ends}
     />
