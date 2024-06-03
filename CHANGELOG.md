@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.10](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.9...v1.2.10) (2024-06-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/sdk to v4.12.1 ([#243](https://github.com/graasp/graasp-app-likert-scale/issues/243)) ([1df8423](https://github.com/graasp/graasp-app-likert-scale/commit/1df842335e61d1ccfa0bf22d2e03ec75e8126b0e))
+
 ## [1.2.9](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.8...v1.2.9) (2024-05-31)
 
 
