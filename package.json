@@ -23,7 +23,7 @@
     "@emotion/styled": "11.11.5",
     "@fontsource/roboto": "^5.0.8",
     "@graasp/apps-query-client": "3.4.15",
-    "@graasp/sdk": "4.12.2",
+    "@graasp/sdk": "4.13.0",
     "@graasp/ui": "4.19.3",
     "@mui/icons-material": "5.15.20",
     "@mui/lab": "5.0.0-alpha.170",
