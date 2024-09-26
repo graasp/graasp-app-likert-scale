@@ -76,7 +76,7 @@
     "@types/lodash.clonedeep": "^4",
     "@types/lodash.isequal": "^4.5.8",
     "@types/node": "^20.12.12",
-    "@types/uuid": "9.0.8",
+    "@types/uuid": "10.0.0",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "@vitejs/plugin-react": "^4.2.1",
