@@ -19,8 +19,8 @@
   "homepage": ".",
   "type": "module",
   "dependencies": {
-    "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.5",
+    "@emotion/react": "11.13.3",
+    "@emotion/styled": "11.13.0",
     "@fontsource/roboto": "^5.0.8",
     "@graasp/apps-query-client": "3.4.15",
     "@graasp/sdk": "4.13.0",
