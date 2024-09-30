@@ -31,7 +31,7 @@
     "@sentry/react": "8.32.0",
     "@tanstack/react-query": "^4.36.1",
     "@tanstack/react-query-devtools": "^4.36.1",
-    "@types/react": "18.3.9",
+    "@types/react": "18.3.10",
     "@types/react-dom": "18.3.0",
     "i18next": "23.15.1",
     "lodash.clonedeep": "^4.5.0",
