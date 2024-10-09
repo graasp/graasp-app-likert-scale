@@ -24,7 +24,7 @@
     "@fontsource/roboto": "^5.0.8",
     "@graasp/apps-query-client": "3.4.15",
     "@graasp/sdk": "4.13.0",
-    "@graasp/ui": "5.2.0",
+    "@graasp/ui": "5.2.2",
     "@mui/icons-material": "6.1.1",
     "@mui/lab": "5.0.0-alpha.173",
     "@mui/material": "6.1.1",
