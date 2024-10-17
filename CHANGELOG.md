@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.13](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.12...v1.2.13) (2024-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/ui to v5.2.2 ([#294](https://github.com/graasp/graasp-app-likert-scale/issues/294)) ([ba9de85](https://github.com/graasp/graasp-app-likert-scale/commit/ba9de856a2ebd592b7ff3b406ccf31221f6bce8e))
+* **deps:** update dependency @sentry/react to v8.34.0 ([#297](https://github.com/graasp/graasp-app-likert-scale/issues/297)) ([6b1430f](https://github.com/graasp/graasp-app-likert-scale/commit/6b1430fd8fa537a2e54e76ea9b0a873d00be78b0))
+* **deps:** update react monorepo ([#295](https://github.com/graasp/graasp-app-likert-scale/issues/295)) ([d8e83ab](https://github.com/graasp/graasp-app-likert-scale/commit/d8e83abd68b8e7ecb4527f7dc9e80146b2541b8a))
+
 ## [1.2.12](https://github.com/graasp/graasp-app-likert-scale/compare/v1.2.11...v1.2.12) (2024-10-01)
 
 
