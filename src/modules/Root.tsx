@@ -122,7 +122,7 @@ const Root: FC = () => {
           <CssBaseline enableColorScheme />
           <I18nextProvider i18n={i18nConfig}>
             <QueryClientProvider client={queryClient}>
-              <ToastContainer />
+              <ToastContainer position="bottom-left" />
               <WithLocalContext
                 defaultValue={window.Cypress ? window.appContext : mockContext}
                 LoadingComponent={<Loader />}

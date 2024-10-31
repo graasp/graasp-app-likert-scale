@@ -14,7 +14,6 @@ import { hooks, mutations } from '../../config/queryClient';
 import Loader from '../common/Loader';
 
 // mapping between Setting names and their data type
-// eslint-disable-next-line @typescript-eslint/ban-types
 type AllSettingsType = {
   levels: LevelsSettings;
   likertItem: LikertItemSettings;
