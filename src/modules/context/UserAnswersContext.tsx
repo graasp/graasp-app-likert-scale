@@ -51,7 +51,7 @@ export const UserAnswersProvider: FC<{
   const { mutate: postAppData } = mutations.usePostAppData();
   const { mutate: patchAppData } = mutations.usePatchAppData();
   const { mutate: deleteAppData } = mutations.useDeleteAppData();
-  const { permission, memberId } = useLocalContext();
+  const { permission, accountId } = useLocalContext();
 
   const { general } = useSettings();
   const { autosubmit } = general;
@@ -66,9 +66,9 @@ export const UserAnswersProvider: FC<{
         (d: AppData) => d.type === AppDataType.UserAnswer,
       ) as UserAnswerAppData[];
       setAllAnswersAppData(allAns);
-      setUserAnswerAppData(allAns.find((d) => d.member.id === memberId));
+      setUserAnswerAppData(allAns.find((d) => d.account.id === accountId));
     }
-  }, [isSuccess, data, memberId]);
+  }, [isSuccess, data, accountId]);
 
   const selectAnswer = useMemo(
     () =>
