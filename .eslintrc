@@ -7,27 +7,27 @@
     "plugin:cypress/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
   ],
   "plugins": ["@typescript-eslint", "prettier", "react-hooks"],
   "env": {
     "browser": true,
     "node": true,
     "mocha": true,
-    "jest": true
+    "jest": true,
   },
   "globals": {
     "cy": true,
-    "Cypress": true
+    "Cypress": true,
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.eslint.json",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "rules": {
     "react/prop-types": "off",
@@ -42,8 +42,8 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": true
-      }
+        "devDependencies": true,
+      },
     ],
     "import/prefer-default-export": "off",
     "prettier/prettier": "error",
@@ -53,16 +53,16 @@
       {
         "ts": "never",
         "js": "never",
-        "tsx": "never"
-      }
+        "tsx": "never",
+      },
     ],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
         "allowExpressions": true,
         "allowHigherOrderFunctions": true,
-        "allowTypedFunctionExpressions": true
-      }
+        "allowTypedFunctionExpressions": true,
+      },
     ],
     "@typescript-eslint/no-var-requires": "off",
     "global-require": "off",
@@ -74,14 +74,14 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [".tsx"]
-      }
+        "extensions": [".tsx"],
+      },
     ],
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": "arrow-function"
-      }
+        "namedComponents": "arrow-function",
+      },
     ],
     // eslint rule reports false error
     "no-shadow": "off",
@@ -91,22 +91,24 @@
       {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_",
-        "caughtErrorsIgnorePattern": "^_"
-      }
-    ]
+        "caughtErrorsIgnorePattern": "^_",
+      },
+    ],
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-throw-literal": "off",
   },
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
       "typescript": {
-        "alwaysTryTypes": true
+        "alwaysTryTypes": true,
       },
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  }
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
 }
