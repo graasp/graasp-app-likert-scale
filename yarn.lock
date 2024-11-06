@@ -2263,9 +2263,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graasp/sdk@npm:^4.33.2":
-  version: 4.34.0
-  resolution: "@graasp/sdk@npm:4.34.0"
+"@graasp/sdk@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@graasp/sdk@npm:5.0.0"
   dependencies:
     "@faker-js/faker": "npm:9.2.0"
     filesize: "npm:10.1.6"
@@ -2273,7 +2273,7 @@ __metadata:
   peerDependencies:
     date-fns: ^3 || ^4.0.0
     uuid: ^9 || ^10 || ^11.0.0
-  checksum: 10/d82c7d5ee20997b49f3c4971243eeec818b5bc7d99bc6883367ecb2424a47b1f1dffb9274f137d20c5db0a2b2c6f64d3871d50efcbc508f36dd9cce9d4fa21bd
+  checksum: 10/33f0d46a2f00e70b69212f1a7104e967ab6c0732dc4c58f561076bfcd04580702bec2ab2c3dc7ce757baed5d62a9e1ee756e8a05d359e7dac2da035704ef5f62
   languageName: node
   linkType: hard
 
@@ -6483,7 +6483,7 @@ __metadata:
     "@emotion/styled": "npm:11.13.0"
     "@fontsource/roboto": "npm:^5.1.0"
     "@graasp/apps-query-client": "npm:^3.7.1"
-    "@graasp/sdk": "npm:^4.33.2"
+    "@graasp/sdk": "npm:^5.0.0"
     "@graasp/ui": "npm:5.4.0"
     "@mui/icons-material": "npm:6.1.6"
     "@mui/lab": "npm:6.0.0-beta.14"
