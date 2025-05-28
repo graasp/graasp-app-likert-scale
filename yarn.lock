@@ -6528,7 +6528,7 @@ __metadata:
     prettier: "npm:3.3.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    react-i18next: "npm:15.1.0"
+    react-i18next: "npm:15.1.4"
     react-toastify: "npm:10.0.6"
     typescript: "npm:5.6.3"
     uuid: "npm:11.0.2"
@@ -8890,9 +8890,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:15.1.0":
-  version: 15.1.0
-  resolution: "react-i18next@npm:15.1.0"
+"react-i18next@npm:15.1.4":
+  version: 15.1.4
+  resolution: "react-i18next@npm:15.1.4"
   dependencies:
     "@babel/runtime": "npm:^7.25.0"
     html-parse-stringify: "npm:^3.0.1"
@@ -8904,7 +8904,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 10/e69af30ff2b5863c14cfa450267f370b4bca781152c9fb7714ce4f6e10d82ec7868608d3539ffa709e9bdf0097ebb4829e33dc03a13c116c30ba74e73439bf81
+  checksum: 10/24fa385431c48ca58007c1284c1e59e928e3f90d2d9ea4347cd345794663d0e9f5c29351e733cba4bccfdca93887c863b6dbefd0b43c347fbca2b608c22b095d
   languageName: node
   linkType: hard
 
